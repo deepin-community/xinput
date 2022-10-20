@@ -1,0 +1,26 @@
+Source: xinput
+Section: x11
+Priority: optional
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Standards-Version: 4.5.0
+Build-Depends:
+ debhelper-compat (= 12),
+ libx11-dev,
+ libxi-dev (>= 2:1.5.99.1),
+ libxext-dev,
+ libxinerama-dev,
+ libxrandr-dev,
+ x11proto-input-dev (>= 2.1.99.1),
+ pkg-config,
+ xutils-dev
+Vcs-Git: https://salsa.debian.org/xorg-team/app/xinput.git
+Vcs-Browser: https://salsa.debian.org/xorg-team/app/xinput
+
+Package: xinput
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Runtime configuration and test of XInput devices
+ Xinput is an utility for configuring and testing XInput
+ devices.
